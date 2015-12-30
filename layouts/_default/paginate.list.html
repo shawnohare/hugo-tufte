@@ -1,0 +1,21 @@
+{{ .Title  }}
+<!-- {{ template "_internal/pagination.html" }} -->
+Hello this is a list of content.
+{{ .TableOfContents }}
+
+{{ $paginator := .Paginate ( (.Data.Pages.GroupByDate "2006") ) }}
+
+<ul>
+  <li>PageNumber: {{ $paginator.PageNumber }}</li>
+  <li>URL: {{ $paginator.URL}}</li>
+  <li>Pages: {{ $paginator.Pages }}</li>
+  <li>TotalPages: {{ $paginator.TotalPages }}</li>
+</ul>
+
+{{ range $paginator.PageGroups }}
+  <h2>{{ .Key }}</h2>
+  {{ range .Pages }}
+    <br/>
+    <a href="{{ .RelPermalink }}">{{.Title}}</a>
+  {{ end }}
+{{ end }}

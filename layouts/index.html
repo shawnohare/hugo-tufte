@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+{{ partial "math.html" . }}
+<body>
+
+  <article>
+      {{ partial "brand.html" . }}
+
+        {{ range first 5 .Site.Pages }}
+          <section class="post-summary">
+            {{ partial "content.header.html" . }}
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+              <a href="{{ .RelPermalink  }}">Read On &rarr;</a>
+            {{ end  }}
+          </section>
+        {{ end  }}
+
+      {{ partial "footer.html" . }}
+  </div>
+  {{ partial "body.includes.html" . }}
+  </article>
+</body>
+</html>

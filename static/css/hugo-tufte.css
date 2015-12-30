@@ -1,0 +1,236 @@
+/* hugo-tufte.css */
+/* Contains extensions to the original tufte.css styles to */
+/* accomodate a blog-like site. */
+
+/* ------------------------------------------------------------------------ */
+/* Brand details, such as a sidebar or top display. */
+/* ------------------------------------------------------------------------ */
+.brand{
+    margin-top: 0.5em;
+}
+
+/* Main brand title */
+.brand h1 {
+    margin: 0;
+    font-weight: 400;
+    color: rgba(65, 70, 75, 1);
+}
+
+/* Brand subtitles */
+.brand h2 {
+    margin: 0;
+    font-weight: 200;
+    color: rgba(100, 105, 110, 1);
+}
+
+.nav {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-top: 0.4em;
+    padding: 0;
+}
+.nav a {
+    text-decoration: none;
+    background: transparent;
+    color: rgba(65, 70, 75, 1);
+    padding: 0.5em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+.nav a:hover,
+.nav a:active,
+.nav a:focus {
+    background: inherit;
+    color: lightgray;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Generic content, such as the index list pages */
+/* ------------------------------------------------------------------------ */
+
+/* Content Title styling.  This is mostly to avoid underlying links. */
+h1.content-title a {
+    background: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+h1.content-title a:hover,
+h1.content-title a:focus {
+    color: lightgray;
+}
+h1.content-title-mini {
+    text-transform: uppercase;
+    color: rgba(170, 170, 170, 1);
+    /*border-bottom: 1px solid #eee;*/
+    padding: 0.4em 0;
+    margin-top: 2em;
+    font-size: 80%;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+/* Content meta-data such as author, publication date, etc. */
+.content-meta {
+    display: block;
+    color: rgba(155, 155, 155, 1);
+    font-size: 90%;
+    margin-top: 1em;
+}
+
+.content-meta .author {
+    /*color: rgb(90, 20, 55)*/
+    color: rgba(65, 70, 75, 1);
+}
+
+/* Content envelope that limits the max width. */
+.content-column {
+    max-width: 38em;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* Posts  FIXME can probably delete */
+/* ------------------------------------------------------------------------ */
+.post-summary {
+    padding-bottom: 2em;
+}
+
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+
+/* ------------------------------------------------------------------------ */
+ /* Styling for listing pages. */
+/* ------------------------------------------------------------------------ */
+.list-page {
+
+}
+.list-page ul {
+    margin: -0.25em;
+}
+.list-page li {
+    margin: 0;
+    font-size: 95%;
+}
+.list-date {
+  display: inline;
+  font-size: 0.75em;
+  color: #9a9a9a;
+  /* padding-right: 2em; */
+  /* margin-right: 2em; */
+}
+
+/* Table of Contents */
+.toc {
+	/*float: right;*/
+	padding: 0 1rem 1rem 1rem;
+	border-left: 1px solid #eee;
+}
+
+.toc h1  {
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.toc ul {
+}
+
+.toc li {
+    font-size: 0.9em;
+    margin: 0.3em;
+}
+
+/* Footer, but with a different name to avoid conflicts with tufte.css */
+.fineprint{
+    padding-top: 1em;
+    margin-top: 3em;
+    color: #aaa;
+}
+.fineprint p {
+    font-size: 100%;
+    margin: 0em;
+    /* light font looked odd on chrome */
+    /*font-weight: lighter;*/
+}
+.fineprint a {
+    color: rgba(65, 70, 75, 1);
+    text-decoration: none;
+    background: transparent;
+}
+.fineprint hr {
+    text-align: left;
+    margin-left: 0;
+    width: 55%;
+    color: #aaa;
+    background-color: red;
+    border-color: #fff;
+}
+
+ul.footer-menu {
+	list-style: none;
+	display: block;
+	/*text-align:center;*/
+	margin: 0;
+	padding: 0;
+}
+.footer-menu li {
+	display: inline-block;
+	margin-right: 0.5rem;
+	font-size: 75%;
+}
+
+.copyright {
+}
+.copyright p {
+    font-size: 90%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Post Archive. */
+/* ------------------------------------------------------------------------ */
+/* We utilize the html5 summary tags in order to create a post archive */
+/* with built-in folding. */
+details {
+    border-radius: 3px;
+}
+
+details summary {
+    font-size: 100%;
+    font-weight: 300;
+    vertical-align: top;
+    padding: .3em .5em;
+    outline: none;
+    color: rgba(65, 70, 75, 1);
+}
+
+details[open] summary {
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+/*  MathJax styling
+/* ------------------------------------------------------------------------ */
+.MathJax {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+}
+
+.MathJax_Display {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    max-width: 38em;
+    overflow-x: auto;
+    overflow-y: auto;
+}

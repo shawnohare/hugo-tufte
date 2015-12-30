@@ -1,0 +1,12 @@
+name = "Tufte"
+license = "MIT"
+licenselink = "https://github.com/shawnohare/hugo-tufte/blob/master/LICENSE.md"
+description = "A minimalist blog theme using Tufte-css."
+homepage = "http://github.com/shawnohare/hugo-tufte"
+tags = ["blog", "tufte", "minimal"]
+features = ["math", "tufte-css"]
+min_version = 0.15
+
+[author]
+  name = "Shawn O'Hare"
+  homepage = "https://shawnohare.com"
