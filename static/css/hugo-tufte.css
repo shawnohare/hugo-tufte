@@ -1,6 +1,12 @@
+/* ------------------------------------------------------------------------ */
 /* hugo-tufte.css */
 /* Contains extensions to the original tufte.css styles to */
 /* accomodate a blog-like site. */
+/* ------------------------------------------------------------------------ */
+
+h2 {
+    padding-top: 2.5rem;
+}
 
 /* ------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
@@ -19,7 +25,9 @@
 /* Brand subtitles */
 .brand h2 {
     margin: 0;
-    font-weight: 200;
+    padding-top: 0rem;
+    /*font-style: normal;*/
+    /*font-weight: 200;*/
     color: rgba(100, 105, 110, 1);
 }
 
@@ -59,16 +67,6 @@ h1.content-title a {
 h1.content-title a:hover,
 h1.content-title a:focus {
     color: lightgray;
-}
-h1.content-title-mini {
-    text-transform: uppercase;
-    color: rgba(170, 170, 170, 1);
-    /*border-bottom: 1px solid #eee;*/
-    padding: 0.4em 0;
-    margin-top: 2em;
-    font-size: 80%;
-    font-weight: normal;
-    letter-spacing: 0.1em;
 }
 
 /* Content meta-data such as author, publication date, etc. */
