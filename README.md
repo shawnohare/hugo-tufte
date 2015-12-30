@@ -29,6 +29,15 @@ The site specific parameters that this theme :wrecognizes are:
   (i.e., pages of type "post") ignore this parameter.
 - `toc` boolean: if true, display the table of contents for the page.
 
+## Shortcodes
+
+- `sidenote`: Wrap text to produce an automatically numbered sidenote.
+  The single positional argument is a required unique identifier.
+  Example: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
+- `marginnote`: Wrap text to produce a numberless margin note.
+  The single positional argument is a required unique identifier.
+  Example: `{{% marginnote"mn-example" %}}Some marginnote{{% /marginnote%}}`
+
 ## Templates
 TODO
 - [ ] Describe the role of each template file, as commenting within the files
