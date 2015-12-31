@@ -1,0 +1,9 @@
+{{ with .Get 0 }}
+  {{ if eq . "begin" }}
+      <section>
+  {{ else if eq . "end" }}
+      </section>
+  {{ end }}
+{{ end }}
+   
+    

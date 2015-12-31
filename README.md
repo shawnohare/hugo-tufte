@@ -31,12 +31,28 @@ The site specific parameters that this theme :wrecognizes are:
 
 ## Shortcodes
 
-- `sidenote`: Wrap text to produce an automatically numbered sidenote.
-  The single positional argument is a required unique identifier.
-  Example: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
-- `marginnote`: Wrap text to produce a numberless margin note.
-  The single positional argument is a required unique identifier.
-  Example: `{{% marginnote"mn-example" %}}Some marginnote{{% /marginnote%}}`
+This theme provides the following shortcodes. 
+
+- `marginnote`
+  - Description: Wrap text to produce a numberless margin note.
+  - Usage: Accepts a required positional argument that is the margin note id.
+  `{{% marginnote "<margin note id>"" %}}...{{% /marginnote %}}`
+  - Example: `{{% marginnote "mn-example" %}}Some marginnote{{% /marginnote%}}`
+
+- `section`
+   - Description: This shortcode is provided as a work-around for wrapping
+   complex blocks of markdown in section tags.
+   - Usage: `{{< section "<begin || end>" >}}` map respectively to
+   `<section>` and `</section>` tags.
+   - Example: `{{< section "begin" >}}` inserts a `<section>` tag, while
+   `{{<section "end" >}}` inserts the closing `</section>` tag.
+
+- `sidenote`
+  - Description: Wrap text to produce an automatically numbered sidenote.
+  - Usage: identical to `marginnote`. 
+  Accepts a required positional argument that is the side note id.
+  `{{% sidenote "<side note id>"" %}}...{{% /sidenote %}}`
+  - Example: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
 
 ## Templates
 TODO
