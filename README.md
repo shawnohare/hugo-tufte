@@ -38,9 +38,9 @@ This theme provides the following shortcodes.
   `cite` or `footer` metadata.
   - Example: 
   ```html
-    {{% blockquote cite="www.shawnohare.com" footer="Shawn" %}}
-      There is nothing more beautiful than an elegant mathematical proof. 
-    {{% /blockquote %}}`
+  {{% blockquote cite="www.shawnohare.com" footer="Shawn" %}}
+    There is nothing more beautiful than an elegant mathematical proof. 
+  {{% /blockquote %}}`
   ```
 - `marginnote`
   - Description: Wrap text to produce a numberless margin note.
