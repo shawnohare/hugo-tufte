@@ -33,6 +33,15 @@ The site specific parameters that this theme :wrecognizes are:
 
 This theme provides the following shortcodes. 
 
+- `blockquote`
+  - Description: Wrap text in a blockquote and insert optional
+  `cite` or `footer` metadata.
+  - Example: 
+  ```html
+    {{% blockquote cite="www.shawnohare.com" footer="Shawn" %}}
+      There is nothing more beautiful than an elegant mathematical proof. 
+    {{% /blockquote %}}`
+  ```
 - `marginnote`
   - Description: Wrap text to produce a numberless margin note.
   - Usage: Accepts a required positional argument that is the margin note id.
@@ -53,6 +62,7 @@ This theme provides the following shortcodes.
   Accepts a required positional argument that is the side note id.
   `{{% sidenote "<side note id>"" %}}...{{% /sidenote %}}`
   - Example: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
+
 
 ## Templates
 TODO
