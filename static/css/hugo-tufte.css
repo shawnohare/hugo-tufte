@@ -4,9 +4,32 @@
 /* accomodate a blog-like site. */
 /* ------------------------------------------------------------------------ */
 
-h2 {
-    padding-top: 2.5rem;
+/* Hugo code blocks are <pre><code class="language-$lang">...</code></pre> */
+@media screen and (max-width: 760px) {
+    pre code {
+       width: 87.5%;
+    }
 }
+
+pre code {
+    width: 52.5%;
+    padding-left: 2.5%;
+    display: block;
+    overflow-x: scroll;
+}
+
+@media (max-width: 760px) {
+    pre code {
+        width: 90%;
+        padding: 0;
+    }
+ }
+
+/* FIXME delete */
+/* To be faithful to Tufte-CSS, we should rely on section shortcodes. */
+/*h2 {
+    padding-top: 2.5rem;
+}*/
 
 /* ------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
@@ -72,7 +95,8 @@ h1.content-title a:focus {
 /* Content meta-data such as author, publication date, etc. */
 .content-meta {
     display: block;
-    color: rgba(155, 155, 155, 1);
+    /*color: rgba(155, 155, 155, 1);*/
+    color: rgba(100, 105, 110, 1);
     font-size: 90%;
     margin-top: 1em;
 }

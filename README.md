@@ -36,6 +36,7 @@ This theme provides the following shortcodes.
 - `blockquote`
   - Description: Wrap text in a blockquote and insert optional
   `cite` or `footer` metadata.
+  - Usage: Accepts the named parameters `cite` and `footer`.
   - Example: 
   ```html
   {{% blockquote cite="www.shawnohare.com" footer="Shawn" %}}
