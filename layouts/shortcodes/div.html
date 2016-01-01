@@ -1,9 +1,8 @@
 {{ $loc := .Get 0  }}
 {{ if .IsNamedParams }}
-  <section {{with .Get "class"}} class="{{.}}"{{end}}{{with .Get "id"}} id="{{.}}"{{end}}>
+  <div {{with .Get "class"}} class="{{.}}"{{end}}{{with .Get "id"}} id="{{.}}"{{end}}>
 {{ else if or (eq $loc "") (eq $loc "begin") }}
-  <section>
+  <div>
 {{ else if eq $loc "end" }}
-  </section>
+  </div>
 {{ end }}
-    
