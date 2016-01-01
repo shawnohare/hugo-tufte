@@ -62,14 +62,14 @@ This theme provides the following shortcodes.
 - `epigraph`
   - Description: Create an epigraph with the wrapped text.
   - Usage: To include a footer with source attribution, pass in the
-  optional named parameters `pre`, `cite`, `post`. These parameters are
+  optional named parameters `pre`, `cite`, `post`. These parameters 
   make no styling assumptions, so spacing is important.  A more compactly
   styled epigraph will be used if the `type` parameter is set to `compact`.
   - Example:
-  ```html
+  ```
   {{% epigraph pre="Author Writer, " cite="Math is Fun" %}}
   This is an example of an epigraph with some math 
-  \\(\mathbb N \subseteq \mathbb R \\)
+  \\( \mathbb N \subseteq \mathbb R \\)
   to start the beginning of a section.
   {{% /epigraph %}}
   ```
