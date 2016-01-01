@@ -37,10 +37,10 @@ The site specific parameters that this theme :wrecognizes are:
 This theme provides the following shortcodes. 
 
 - `blockquote`
-  - Description: Wrap text in a blockquote and insert optional
+  - **Description**: Wrap text in a blockquote and insert optional
   `cite` or `footer` metadata.
-  - Usage: Accepts the named parameters `cite` and `footer`.
-  - Example: 
+  - **Usage**: Accepts the named parameters `cite` and `footer`.
+  - **Example**: 
   ```html
   {{% blockquote cite="www.shawnohare.com" footer="Shawn" %}}
     There is nothing more beautiful than an elegant mathematical proof. 
@@ -48,24 +48,24 @@ This theme provides the following shortcodes.
   ```
 
 - `div`
-   - Description: This shortcode is provided as a work-around for wrapping
+   - **Description**: This shortcode is provided as a work-around for wrapping
    complex blocks of markdown in div tags. The wrapped text can
    include other shortcodes
-   - Usage: Identical to the `section` shortcode.
+   - **Usage**: Identical to the `section` shortcode.
    Accepts the style parameters `class` and `id`.
    If no only the positional argument `"end"` is passed, a closing tag
    will be inserted.
-   - Example: `{{< div class="my-class" >}}` inserts a 
+   - **Example**: `{{< div class="my-class" >}}` inserts a 
    `<div class="my-class">` tag, while
    `{{<div "end" >}}` inserts the closing `</div>` tag.
 
 - `epigraph`
-  - Description: Create an epigraph with the wrapped text.
-  - Usage: To include a footer with source attribution, pass in the
+  - **Description**: Create an epigraph with the wrapped text.
+  - **Usage**: To include a footer with source attribution, pass in the
   optional named parameters `pre`, `cite`, `post`. These parameters 
   make no styling assumptions, so spacing is important.  A more compactly
   styled epigraph will be used if the `type` parameter is set to `compact`.
-  - Example:
+  - **Example**:
   ```
   {{% epigraph pre="Author Writer, " cite="Math is Fun" %}}
   This is an example of an epigraph with some math 
@@ -75,29 +75,29 @@ This theme provides the following shortcodes.
   ```
 
 - `marginnote`
-  - Description: Wrap text to produce a numberless margin note.
+  - **Description**: Wrap text to produce a numberless margin note.
   - Usage: Accepts a required positional argument that is the margin note id.
   `{{% marginnote "<margin note id>"" %}}...{{% /marginnote %}}`
-  - Example: `{{% marginnote "mn-example" %}}Some marginnote{{% /marginnote%}}`
+  - **Example**: `{{% marginnote "mn-example" %}}Some marginnote{{% /marginnote%}}`
 
 - `section`
-   - Description: This shortcode is provided as a work-around for wrapping
+   - **Description**: This shortcode is provided as a work-around for wrapping
    complex blocks of markdown in section tags. The wrapped text can
    include other shortcodes
-   - Usage: Accepts the style parameters `class` and `id`.
+   - **Usage**: Accepts the style parameters `class` and `id`.
    If no only the positional argument `"end"` is passed, a closing tag
    will be inserted.
-   - Example: `{{< section class="my-class" >}}` inserts a 
+   - **Example**: `{{< section class="my-class" >}}` inserts a 
    `<section class="my-class">` tag, while
    `{{<section "end" >}}` inserts the closing `</section>` tag.
 
 
 - `sidenote`
-  - Description: Wrap text to produce an automatically numbered sidenote.
-  - Usage: identical to `marginnote`. 
+  - **Description**: Wrap text to produce an automatically numbered sidenote.
+  - **Usage**: identical to `marginnote`. 
   Accepts a required positional argument that is the side note id.
   `{{% sidenote "<side note id>"" %}}...{{% /sidenote %}}`
-  - Example: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
+  - **Example**: `{{% sidenote "sn-example" %}}Some sidenote{{% /sidenote %}}`
 
 
 ## Templates
