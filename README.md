@@ -65,7 +65,6 @@ This theme provides the following shortcodes.
   optional named parameters `pre`, `cite`, `post`. These parameters are
   make no styling assumptions, so spacing is important.  A more compactly
   styled epigraph will be used if the `type` parameter is set to `compact`.
-  (This just wraps the content in a paragraph tag.)
   - Example:
   ```html
   {{% epigraph pre="Author Writer, " cite="Math is Fun" %}}
