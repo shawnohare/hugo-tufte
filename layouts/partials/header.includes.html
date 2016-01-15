@@ -1,5 +1,5 @@
 <!-- Load MathJax, if necessary. -->
-{{ if eq .Params.math true }}
+{{ if or (eq .Params.math "true") (.IsHome) }}
   {{ partial "math.html" . }}
 {{ end }}
 

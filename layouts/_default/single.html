@@ -1,23 +1,17 @@
 {{ partial "header.html" . }}
 
 <body>
-  <div id="layout" class="pure-g">
-  <div class="content content-column pure-u-1 pure-u-md-4-5">
-    {{ partial "brand.html" . }}
-    {{ partial "content.header.html" . }}
-    {{ if .Params.toc  }}
-      <div class="toc">
-        <h1>Contents</h1>
-        {{ .TableOfContents }}
-      </div>
-    {{ end  }}
-    {{ .Content }}
-
-    {{ partial "disqus.html" . }}
-    {{ partial "footer.html" . }}
-  </div>
-  </div>
-
-  {{ partial "body.includes.html" . }}
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+{{ partial "brand.html" . }}
+{{ partial "content.header.html" . }}
+{{ partial "toc.html" . }}
+<section>{{ .Content }}</section>
+<section>
+  {{ partial "disqus.html" . }}
+  {{ partial "footer.html" . }}
+</section>
+</article>
+</div>
 </body>
 </html>

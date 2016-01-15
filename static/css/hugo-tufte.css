@@ -4,49 +4,55 @@
 /* accomodate a blog-like site. */
 /* ------------------------------------------------------------------------ */
 
+/* When setting the primary font stack, apply it to the Pure grid units along */
+/* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
+/* specific font stacks to ensure the greatest OS/browser compatibility. */
+html, button, input, select, textarea, p, nav, section, article, header, footer, .pure-g [class *= "pure-u"] {
+    font-family: "et-book", -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;
+}
+
 /* Hugo code blocks are <pre><code class="language-$lang">...</code></pre> */
-@media screen and (max-width: 760px) {
+/*@media screen and (max-width: 760px) {
     pre code {
-       width: 87.5%;
     }
+}*/
+
+code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
 pre code {
     width: 52.5%;
+    font-size: 1.2rem;
     padding-left: 2.5%;
     display: block;
     overflow-x: scroll;
 }
 
-@media (max-width: 760px) {
+/*@media (max-width: 760px) {
     pre code {
         width: 90%;
         padding: 0;
     }
- }
-
-/* FIXME delete */
-/* To be faithful to Tufte-CSS, we should rely on section shortcodes. */
-/*h2 {
-    padding-top: 2.5rem;
-}*/
+ }*/
 
 /* ------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
 /* ------------------------------------------------------------------------ */
-.brand{
+header.brand{
     margin-top: 0.5em;
 }
 
 /* Main brand title */
-.brand h1 {
+header.brand h1 {
     margin: 0;
     font-weight: 400;
     color: rgba(65, 70, 75, 1);
 }
 
-/* Brand subtitles */
-.brand h2 {
+header.brand h2 {
     margin: 0;
     padding-top: 0rem;
     /*font-style: normal;*/
@@ -54,27 +60,43 @@ pre code {
     color: rgba(100, 105, 110, 1);
 }
 
-.nav {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin-top: 0.4em;
-    padding: 0;
+header.brand hr {
+    text-align: left;
+    margin-left: 0;
+    width: 75%;
+    border-color: rgba(250, 250, 250, 0.25);
 }
-.nav a {
+
+nav.menu ul {
+	list-style: none;
+	display: block;
+	/*text-align:center;*/
+	margin-top: 0.75rem;
+	padding: 0;
+    max-width: 45rem;
+    /* Width is the same as tufte.css body */
+    font-size: .9rem;
+    width: 87.5%;
+}
+
+nav.menu li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+nav.menu li a {
     text-decoration: none;
     background: transparent;
     color: rgba(65, 70, 75, 1);
-    padding: 0.5em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 90%;
 }
-.nav a:hover,
-.nav a:active,
-.nav a:focus {
+
+nav.menu li a:hover,
+nav.menu li a:active,
+nav.menu li a:focus {
     background: inherit;
-    color: lightgray;
+    color: darkgray;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -82,14 +104,18 @@ pre code {
 /* ------------------------------------------------------------------------ */
 
 /* Content Title styling.  This is mostly to avoid underlying links. */
-h1.content-title a {
+h1.content-title {
+    /*max-width: 50rem;*/
+}
+h1.content-title a:link,
+h1.content-title a:visited {
     background: transparent;
     text-decoration: none;
     color: inherit;
 }
 h1.content-title a:hover,
 h1.content-title a:focus {
-    color: lightgray;
+    color: darkgray;
 }
 
 /* Content meta-data such as author, publication date, etc. */
@@ -97,7 +123,7 @@ h1.content-title a:focus {
     display: block;
     /*color: rgba(155, 155, 155, 1);*/
     color: rgba(100, 105, 110, 1);
-    font-size: 90%;
+    font-size: 1.1rem;
     margin-top: 1em;
 }
 
@@ -106,19 +132,6 @@ h1.content-title a:focus {
     color: rgba(65, 70, 75, 1);
 }
 
-/* Content envelope that limits the max width. */
-.content-column {
-    max-width: 38em;
-    margin: 0 auto;
-}
-
-
-/* ------------------------------------------------------------------------ */
-/* Posts  FIXME can probably delete */
-/* ------------------------------------------------------------------------ */
-.post-summary {
-    padding-bottom: 2em;
-}
 
 .post-avatar {
     border-radius: 50px;
@@ -129,81 +142,92 @@ h1.content-title a:focus {
 /* ------------------------------------------------------------------------ */
  /* Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
-.list-page {
-
-}
 .list-page ul {
+    list-style-type: none;
     margin: -0.25em;
+    width: 87.5%;
+    max-width: 45rem;
 }
 .list-page li {
     margin: 0;
-    font-size: 95%;
+    /*font-size: 95%;*/
 }
 .list-date {
   display: inline;
   font-size: 0.75em;
-  color: #9a9a9a;
   /* padding-right: 2em; */
   /* margin-right: 2em; */
 }
 
 /* Table of Contents */
-.toc {
-	/*float: right;*/
-	padding: 0 1rem 1rem 1rem;
-	border-left: 1px solid #eee;
+.toc summary {
+    font-size: 1.5rem;
+    margin-bottom: -1.5rem;
+    padding-left: 0;
 }
 
-.toc h1  {
-    font-weight: lighter;
-    font-size: 1em;
+.toc {
+	/*float: right;*/
+	/*padding: 0rem 1rem 1rem 1rem;*/
+    /*margin-top: 1rem;*/
+	/*border-left: 1px solid #eee;*/
 }
 
 .toc ul {
+	list-style: none;
+	display: block;
+	/*margin-top: 0.75rem;*/
+	padding: 0;
+    width: 87.5%;
 }
 
 .toc li {
-    font-size: 0.9em;
-    margin: 0.3em;
+    line-height: 0.5rem;
+    margin: 1rem;
+}
+
+table {
+    font-size: 1.4rem;
 }
 
 /* Footer, but with a different name to avoid conflicts with tufte.css */
-.fineprint{
+footer.page-footer{
     padding-top: 1em;
     margin-top: 3em;
     color: #aaa;
+    width: 95%;
+    max-width: 45rem;
 }
-.fineprint p {
-    font-size: 100%;
+footer.page-footer p {
+    font-size: 1.2rem;
     margin: 0em;
     /* light font looked odd on chrome */
     /*font-weight: lighter;*/
 }
-.fineprint a {
+footer.page-footer a {
     color: rgba(65, 70, 75, 1);
     text-decoration: none;
     background: transparent;
 }
-.fineprint hr {
+footer.page-footer hr {
     text-align: left;
     margin-left: 0;
-    width: 55%;
-    color: #aaa;
-    background-color: red;
-    border-color: #fff;
+    width: 100%;
+    border-color: rgba(250, 250, 250, 0.25);
 }
 
-ul.footer-menu {
+footer.page-footer ul.page-footer-menu {
 	list-style: none;
 	display: block;
 	/*text-align:center;*/
 	margin: 0;
 	padding: 0;
 }
-.footer-menu li {
+
+footer.page-footer ul.page-footer-menu li {
 	display: inline-block;
 	margin-right: 0.5rem;
-	font-size: 75%;
+	font-size: 55%;
 }
 
 .copyright {
@@ -222,12 +246,14 @@ details {
 }
 
 details summary {
-    font-size: 100%;
-    font-weight: 300;
     vertical-align: top;
     padding: .3em .5em;
     outline: none;
-    color: rgba(65, 70, 75, 1);
+    /*color: rgba(65, 70, 75, 1);*/
+}
+
+details summary.year {
+    font-size: 1.5rem;
 }
 
 details[open] summary {
@@ -252,7 +278,7 @@ details[open] summary {
     font-size: 100%;
     background: inherit;
     border: inherit;
-    max-width: 38em;
+    max-width: 45rem;
     overflow-x: auto;
     overflow-y: auto;
 }

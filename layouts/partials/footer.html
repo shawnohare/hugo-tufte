@@ -1,5 +1,6 @@
-<div class="fineprint">
-		<ul class="footer-menu">
+<footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
 		{{ range .Site.Menus.footer }}
       <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
 		{{ end }}
@@ -8,7 +9,7 @@
   {{ if .Site.Params.showPoweredBy}}
     <p>
       Powered by <a href="https://gohugo.io">Hugo</a> and the
-      <a href="https://github.com/shawnohare/hugo-morphism">Morphism theme</a>.
+      <a href="https://github.com/shawnohare/hugo-tufte">Tufte theme</a>.
     </p>
   {{ end }}
 
@@ -23,4 +24,5 @@
     {{end}}
   </p>
 </div>
-</div>
+</footer>
+{{ partial "body.includes.html" . }}
