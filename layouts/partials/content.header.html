@@ -1,9 +1,12 @@
+<section>
 <h1 class="content-title">
-  <a href="{{ .RelPermalink }}">
-    {{ .Title }}
-    {{ if .Draft }} :: Draft {{end}}
-  </a>
+  {{ if .IsNode }}
+  <a href="{{ .Permalink }}">{{ .Title}}<a>
+  {{ else }}
+  <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
+  {{ end }}
 </h1>
+{{ if .IsPage }}
 {{ if .Params.subtitle }}<p class=subtitle>{{ .Params.subtitle }}</p>{{ end }}
 {{ if or (eq .Type "post") (.Params.meta)  }}
   <span class="content-meta">
@@ -32,3 +35,5 @@
     {{ end }}
   </span>
 {{ end }}
+{{ end }}
+</section>
