@@ -13,7 +13,7 @@ TODO explain the different ways to write LaTeX.
 
 ## Site Parameters
 
-The site specific parameters that this theme :wrecognizes are:
+The site specific parameters that this theme recognizes are:
 
 - `subtitle` string: This is displayed under the main title.
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
@@ -34,7 +34,9 @@ The site specific parameters that this theme :wrecognizes are:
 
 ## Shortcodes
 
-This theme provides the following shortcodes. 
+This theme provides the following shortcodes in an attempt to completely
+support all the features present in the 
+[Tufte-css](https://github.com/edwardtufte/tufte-css) project.
 
 - `blockquote`
   - **Description**: Wrap text in a blockquote and insert optional
