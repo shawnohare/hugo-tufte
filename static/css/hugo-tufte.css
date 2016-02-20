@@ -68,11 +68,11 @@ header.brand hr {
 }
 
 nav.menu ul {
-	list-style: none;
-	display: block;
-	/*text-align:center;*/
-	margin-top: 0.75rem;
-	padding: 0;
+    list-style: none;
+    display: block;
+    /*text-align:center;*/
+    margin-top: 0.75rem;
+    padding: 0;
     max-width: 45rem;
     /* Width is the same as tufte.css body */
     font-size: .9rem;
@@ -278,7 +278,8 @@ details[open] summary {
     font-size: 100%;
     background: inherit;
     border: inherit;
-    max-width: 45rem;
+    padding-bottom: 1rem;
+    /* max-width: 45rem; */
     overflow-x: auto;
     overflow-y: auto;
 }
