@@ -1,0 +1,57 @@
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+builddrafts = true 
+canonifyurls = true
+baseurl = "www.hugo-tufte.com"
+theme = "hugo-tufte"
+title = "Hugo-tufte Theme Example Site"
+
+[taxonomies]
+  category = "categories" 
+  group = "groups"
+  series = "series"
+  tag = "tags"
+
+[params]
+  subtitle = "Subtitle goes here."
+  copyrightHolder = "Copyright Holder"
+  showPoweredBy = true
+
+# -----------------------------------------------------------------------
+# Morphism theme navigation menu 
+# -----------------------------------------------------------------------
+[[menu.nav]]
+  name = "Home"
+  pre = "<i class='fa fa-home fa-lg'></i> "
+  weight = -110 
+  identifier = "home"
+  url = "/"
+[[menu.nav]]
+  name = "Posts"
+  pre = "<i class='fa fa-book fa-lg'></i> "
+  weight = -100 
+  identifier = "posts"
+  url = "/post"
+[[menu.nav]]
+  name = "Categories"
+  pre = "<i class='fa fa-tags fa-lg'></i> "
+  weight = -90 
+  identifier = "categories"
+  url = "/categories"
+
+# -----------------------------------------------------------------------
+# Morphism theme footer menu 
+# -----------------------------------------------------------------------
+[[menu.footer]]
+  name = ""
+  pre = "<i class='fa fa-github fa-2x'></i> "
+  weight = -100 
+  identifier = "github"
+  url = "https://github.com/shawnohare/hugo-tufte"
+[[menu.footer]]
+  name = ""
+  pre = "<i class='fa fa-twitter fa-2x'></i> "
+  weight = -90 
+  identifier = "twitter"
+  url = "https://twitter.com"
