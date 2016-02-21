@@ -3,7 +3,7 @@ layoutdir = "layouts"
 publishdir = "public"
 builddrafts = true 
 canonifyurls = true
-baseurl = "www.hugo-tufte.com"
+baseurl = "https://github.com/shawnohare/hugo-tufte"
 theme = "hugo-tufte"
 title = "Hugo-tufte Theme Example Site"
 
@@ -19,7 +19,7 @@ title = "Hugo-tufte Theme Example Site"
   showPoweredBy = true
 
 # -----------------------------------------------------------------------
-# Morphism theme navigation menu 
+# Navigation menu 
 # -----------------------------------------------------------------------
 [[menu.nav]]
   name = "Home"
@@ -41,7 +41,7 @@ title = "Hugo-tufte Theme Example Site"
   url = "/categories"
 
 # -----------------------------------------------------------------------
-# Morphism theme footer menu 
+# Footer menu 
 # -----------------------------------------------------------------------
 [[menu.footer]]
   name = ""
