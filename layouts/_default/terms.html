@@ -21,7 +21,7 @@
         {{ range $key, $value := .Data.Terms.ByCount }}
           <tr>
             <td>
-            <a href="{{ $data.Plural }}/{{ $value.Name| urlize }}">
+            <a href="{{ $value.Name| urlize }}">
             {{ $value.Name}}
             </a>
             </td>
@@ -46,7 +46,7 @@
         </tbody>
         {{ range $key, $value := .Data.Terms.Alphabetical}}
           <tr>
-            <td><a href="{{ $data.Plural }}/{{ $value.Name| urlize }}">
+            <td><a href="{{ $value.Name| urlize }}">
               {{ $value.Name}}
             </a></td>
             <td>{{  $value.Count }}</td>
