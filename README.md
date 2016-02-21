@@ -9,7 +9,34 @@ By utilizing copious partial templates the theme is largely customizable.
 
 ## Math
 
-TODO explain the different ways to write LaTeX.
+Mathjax renders LaTeX written inside of markdown files.  LaTeX can be
+written more or less as normal, but inline and display environments that
+start with `\` must be escaped.  Some examples:
+
+- `This $\LaTeX$ will be rendered inline.` 
+- `This \\(\LaTeX\\) will be rendered inline.` 
+- `A simple displayed equation: $$f(x, y) := e^{x^2 - y^2}.$$`
+- `A simple displayed equation: \\[f(x, y) := e^{x^2 - y^2}.\\]`
+
+There currently seems to be some weirdness with other environments,
+such as the `align` environment.  These environments will render provided
+they are wrapped in `<p>` tags and blank lines.  The snippet below should
+render correctly.
+```
+Let $G$ be a finite group with exponent $2$.  Then every element is
+an involution, hence for any $x$, $y$ in $G$ we have:
+
+<p>
+\begin{align*}
+  e &= (xy)^2  \\
+  &=xyxy \implies \\
+  y^{-1} &= xyx \implies \\
+  y^{-1}x^{-1} &= xy,
+\end{align*}
+</p>
+
+establishing that $G$ is abelian.
+```
 
 ## Site Parameters
 
