@@ -54,7 +54,7 @@ The site specific parameters that this theme recognizes are:
 - `hideReadTime` boolean: if true, do not display the page's reading time
   estimate.  When `meta` is set to true, `hideReadTime` takes greater precedence.
 - `math` boolean: if true, try to render the page's LaTeX code using MatheJax. 
-- `meta` boolean: if true, display page meta-data author, date, categories provided
+- `meta` boolean: if true, display page metadata such as author, date, categories provided
   these page parameters exist and are not overridden.  Content in the `/post` directory,
   (i.e., pages of type "post") ignore this parameter.
 - `toc` boolean: if true, display the table of contents for the page.
@@ -82,7 +82,7 @@ support all the features present in the
    include other shortcodes
    - **Usage**: Identical to the `section` shortcode.
    Accepts the style parameters `class` and `id`.
-   If no only the positional argument `"end"` is passed, a closing tag
+   If only the positional argument `"end"` is passed, a closing tag
    will be inserted.
    - **Example**: `{{< div class="my-class" >}}` inserts a 
    `<div class="my-class">` tag, while
@@ -114,7 +114,7 @@ support all the features present in the
    complex blocks of markdown in section tags. The wrapped text can
    include other shortcodes
    - **Usage**: Accepts the style parameters `class` and `id`.
-   If no only the positional argument `"end"` is passed, a closing tag
+   If only the positional argument `"end"` is passed, a closing tag
    will be inserted.
    - **Example**: `{{< section class="my-class" >}}` inserts a 
    `<section class="my-class">` tag, while
