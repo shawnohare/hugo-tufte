@@ -18,7 +18,7 @@
     {{ with .Site.Params.copyright }}
       {{ . | safeHTML }}
     {{ else }}
-      &copy; {{.Now.Format "2006"}}
+      &copy; {{now.Format "2006"}}
     {{ with .Site.Params.copyrightHolder }}{{ . }}{{end}}.
     All rights reserved.
     {{end}}
