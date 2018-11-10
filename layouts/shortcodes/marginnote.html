@@ -1,3 +1,9 @@
-<label for="{{ .Get 0 }}" class="margin-toggle">&#8853;</label>
-<input type="checkbox" id="{{ .Get 0 }}" class="margin-toggle"/>
+{{ $marginnoteDomIdSuffix := .Page.Scratch.Get "marginnoteDomIdSuffix" }}
+{{ if eq $marginnoteDomIdSuffix nil }}
+{{ .Page.Scratch.Set "marginnoteDomIdSuffix" 0 }}
+{{ end }}
+{{ .Page.Scratch.Add "marginnoteDomIdSuffix" 1 }}
+{{ $marginnoteDomIdSuffix = .Page.Scratch.Get "marginnoteDomIdSuffix" }}
+<label for="marginnote-{{.Page.UniqueID}}-{{ $marginnoteDomIdSuffix }}" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="marginnote-{{.Page.UniqueID}}-{{ $marginnoteDomIdSuffix }}" class="margin-toggle"/>
 <span class="marginnote">{{ .Inner }}</span>
