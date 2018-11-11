@@ -1,23 +1,30 @@
-{{ partial "header.html" . }}
-{{ $paginator := .Paginator }}
-<body>
-  <meta name="layout" content="single" />
-<div id="layout" class="pure-g">
-  <nav role="navigation" aria-label="Blog postings pagination">
-    {{ partial "paginator.html" $paginator }}
-  </nav>
-
-<article class="pure-u-1">
-{{ partial "brand.html" . }}
-{{ range $paginator.Pages }}
-  {{ partial "content.header.html" . }}
-  <p>{{ .Summary }}</p>
-  {{ if .Truncated }}
-  <p><a href="{{ .RelPermalink  }}">Read On &rarr;</a></p>
-  {{ end  }}
-{{ end  }}
-{{ partial "footer.html" . }}
-</article>
-</div>
-</body>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {{ partial "single/head.html" . }}
+  {{ partial "single/head.html" . }}
+  <body class="default-width">
+    {{ $paginator := .Paginator }}
+    {{ partial "single/body-header.html" . }}
+    <nav role="navigation" aria-label="Blog postings pagination">
+      {{ partial "paginator.html" $paginator }}
+    </nav>
+    <main role="main" aria-label="Blog postings" class="blogPostings">
+      <h1>Blog Posts</h1>
+      <a name="skip-to-content"> </a>
+      {{ range $paginator.Pages }}
+        <article>
+          <header>
+            <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
+          </header>
+          <section class="content">
+            {{ .Content }}
+          </section>
+        </article>
+      {{ end }}
+    </main>
+    <nav role="navigation" aria-hidden="true">
+      {{ partial "paginator.html" $paginator }}
+    </nav>
+    {{ partial "footer.html" . }}
+  </body>
 </html>
