@@ -1,0 +1,32 @@
+/* --- Icomoon icon fonts CSS --- */
+/* --- Using the https://icomoon.io/app/ to generate the fonts --- */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot');
+  src:  url('/fonts/icomoon.eot#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf') format('truetype'),
+    url('/fonts/icomoon.woff') format('woff'),
+    url('/fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] { font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; color: $contrast-color; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon-dice:before { content: "\e915";}
+.icon-envelop:before { content: "\e945";}
+.icon-quotes-left:before { content: "\e977";}
+.icon-bookmark:before { content: "\e9d2";}
+.icon-section:before { content: "\ea76";}
+.icon-share:before { content: "\ea7d";}
+.icon-mail:before { content: "\ea86";}
+.icon-google-plus:before { content: "\ea8d";}
+.icon-feed:before { content: "\ea9c";}
+.icon-github:before { content: "\eab0";}
+.icon-reddit:before { content: "\eac6";}
+.icon-file-pdf:before { content: "\eadf";}
+.icon-link:before { content: "\e900";}
+.icon-pushpin:before { content: "\e901";}
+.icon-quotes-right:before { content: "\e902";}
+.icon-link:before { content: "\e903";}
+.icon-file-empty:before { content: "\e904";}

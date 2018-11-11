@@ -17,7 +17,7 @@
             <th>Count</th>
           </tr>
         </thead>
-        </tbody>
+        <tbody>
         {{ range $key, $value := .Data.Terms.ByCount }}
           <tr>
             <td>
@@ -43,7 +43,7 @@
             <th>Count</th>
           </tr>
         </thead>
-        </tbody>
+        <tbody>
         {{ range $key, $value := .Data.Terms.Alphabetical}}
           <tr>
             <td><a href="{{ $value.Name| urlize }}">

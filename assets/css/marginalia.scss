@@ -1,0 +1,30 @@
+// I encountered print styling issues where an H2 was "floating" to the right of marginalia
+// This appeared to resolve that issue
+h1, h2, h3, h4, h5 { clear: left; }
+
+// Responsible for common rendering behavior of the marginalia. When tinkering
+// with this file, remember to review both the narrow version and the print version
+.sidenote, .marginnote { float: right; clear: right; margin-right: -60%; width: 50%; margin-top: 0; margin-bottom: 1.96rem; font-size: 1.0rem; line-height: 1.96; vertical-align: baseline; position: relative; }
+
+ //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
+li .sidenote, li .marginnote{ margin-right: -80%; }
+
+blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
+
+.sidenote-number { counter-increment: sidenote-counter; }
+
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " "; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
+
+.sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
+
+ sidenote:before { content: counter(sidenote-counter) ".\000a0"; color: $contrast-color; top: 0rem; }
+
+.marginnote code, .sidenote code { font-size: 1rem; } //more .code class removal
+
+.full-width { .sidenote, .sidenote-number, .marginnote { display: none; } }
+
+input.margin-toggle { display: none; }
+
+label.sidenote-number { display: inline; }
+
+label.margin-toggle:not(.sidenote-number) { display: none; }
