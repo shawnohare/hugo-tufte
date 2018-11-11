@@ -1,10 +1,15 @@
 {{ partial "header.html" . }}
+{{ $paginator := .Paginator }}
 <body>
   <meta name="layout" content="single" />
 <div id="layout" class="pure-g">
+  <nav role="navigation" aria-label="Blog postings pagination">
+    {{ partial "paginator.html" $paginator }}
+  </nav>
+
 <article class="pure-u-1">
 {{ partial "brand.html" . }}
-{{ range first 5 .Site.Pages }}
+{{ range $paginator.Pages }}
   {{ partial "content.header.html" . }}
   <p>{{ .Summary }}</p>
   {{ if .Truncated }}

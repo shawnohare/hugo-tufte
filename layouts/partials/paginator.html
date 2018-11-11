@@ -1,0 +1,17 @@
+{{/* Assumes a .Paginator object */}}
+{{ if .HasNext }}
+<a href="{{ .Next.URL }}" class="previous" aria-label="Previous posts">
+  &laquo; Previous posts
+</a>
+{{ else }}
+<span class="previous">&laquo; Previous posts</span>
+{{ end }}
+|
+{{ if .HasPrev }}
+  <a href="{{ .Prev.URL }}" class="next" aria-label="Next posts">Next posts &raquo;</a>
+{{ else }}
+  <span class="next ">Next posts &raquo;</span>
+{{ end }}
+<small class="page_number ">
+  Page {{ .PageNumber }} of {{ .TotalPages }}
+</small>
