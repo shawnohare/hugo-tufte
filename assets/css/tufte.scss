@@ -52,7 +52,7 @@ body { width: 87.5%; margin-left: auto; margin-right: auto; padding-left: 12.5%;
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 {                     font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem;              margin-bottom: 1.568rem; line-height: 1.08888888888889; }
-h2 { font-style: italic; font-weight: 400; font-size: 2.1rem; margin-top: 1.8666666666666667rem; margin-bottom: 0;        line-height: 1.08888888888889; }
+h2, summary { font-style: italic; font-weight: 400; font-size: 2.1rem; margin-top: 1.8666666666666667rem; margin-bottom: 0;        line-height: 1.08888888888889; }
 h3 { font-style: italic; font-weight: 400; font-size: 1.8rem; margin-top: 2.1777777777777778rem; margin-bottom: 0;        line-height: 1.08888888888889; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
@@ -263,8 +263,8 @@ hr.slender {
     thead { display: table-header-group; }
     tr, img { page-break-inside: avoid; }
     img { max-width: 100% !important; }
-    p, h2, h3 { orphans: 4; widows: 4; }
-    article h2, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 { page-break-after: avoid; }
+    p, h2, summary , h3 { orphans: 4; widows: 4; }
+    article h2, article summary, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 { page-break-after: avoid; }
     body header , body footer.group { display:none; }
 }
 
@@ -302,7 +302,7 @@ header form { padding-bottom: 1rem; }
 body.full-width ul { width: 85%; }
 main.blogPostings article {
   h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.8rem; }
+  h2, summary { font-size: 1.8rem; }
   h3 { font-size: 1.6rem; }
   h4 { font-size: 1.2rem; }
   section.content { margin-top: 0.5rem; }
