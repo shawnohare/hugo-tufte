@@ -1,17 +1,30 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {{ partial "single/head.html" . }}
+  <!-- Need to add option to toggle width -->
+  <body class="default-width">
+    {{ partial "single/body-header.html" . }}
+    <main class="group" role="main" aria-label="Blog posting">
+      <nav role="navigation" aria-label="Blog postings navigation">
+        {{ partial "single/body-navigation.html" . }}
+      </nav>
+      <article role="article" class="single-article">
+        <header>
+          <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+          <div class="post-meta">
+            {{ partial "single/body-header-meta.html" . }}
+          </div>
+        </header>
 
-<body>
-<div id="layout" class="pure-g">
-<article class="pure-u-1">
-{{ partial "brand.html" . }}
-{{ partial "content.header.html" . }}
-{{ partial "toc.html" . }}
-<section>{{ .Content }}</section>
-<section>
-  {{ partial "disqus.html" . }}
-  {{ partial "footer.html" . }}
-</section>
-</article>
-</div>
-</body>
+        <a name="skip-to-content"> </a>
+        <section class="content">
+          {{ .Content }}
+        </section>
+      </article>
+      <nav role="navigation" aria-hidden="true">
+        {{ partial "single/body-navigation.html" . }}
+      </nav>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
 </html>

@@ -1,0 +1,14 @@
+<dl>
+  {{ with .Params.tags }}
+    <dt>Tags:<a name="skip-to-tags"> </a></dt>
+    {{ range . }}
+        <dd><a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></dd>
+    {{ end }}
+  {{ end }}
+  <dt>Published:</dt>
+  <dd><time datetime="{{ .PublishDate.Format "2006-02-03" }}">{{ .PublishDate.Format "2006-02-03" }}</time></dd>
+  {{ with .Lastmod }}
+    <dt>Modified:</dt>
+    <dd><time datetime="{{ .Format "2006-02-03" }}">{{ .Format "2006-02-03" }}</time></dd>
+  {{ end }}
+</dl>
