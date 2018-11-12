@@ -1,4 +1,4 @@
-{{ if .PrevPage }}
+{{ if .PrevInSection }}
   <a href="{{ .PrevPage.Permalink }}" class="previous" aria-label="Previous post">
     &laquo; Previous post
   </a>
@@ -6,7 +6,7 @@
   <span class="previous">&laquo; Previous post</span>
 {{ end }}
 |
-{{ if .NextPage }}
+{{ if .NextInSection }}
   <a href="{{ .NextPage.Permalink }}" class="next" aria-label="Next posts">Next posts &raquo;</a>
 {{ else }}
   <span class="next ">Next posts &raquo;</span>
