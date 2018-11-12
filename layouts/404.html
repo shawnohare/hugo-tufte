@@ -1,7 +1,25 @@
-{{ partial "header.html" . }}
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-  </div>
-</section>
-{{ partial "footer.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {{ partial "single/head.html" . }}
+  <!-- Need to add option to toggle width -->
+  <body class="default-width">
+    {{ partial "single/body-header.html" . }}
+    <main class="group" role="main" aria-label="Blog posting">
+      <article role="article">
+        <header>
+          <h1>{{ .Title }}</h1>
+        </header>
+
+        <a name="skip-to-content"> </a>
+        <section class="content">
+          {% marginfigure "logo.jpg" "The Chicken of Judgement has found nothing." "A large yellow wooden abstract chicken stares at you amongst a field of game pieces." %}
+
+          <p>Welp, it looks like we couldn't find what you requested.</p>
+
+          <p>Maybe try a site search? Or [contacting me](/contact-me) to see if I can help you find it. <em>I did migrate my site, and while I tried to avoid broken pages, I'm not perfect.</em></p>
+        </section>
+      </article>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
