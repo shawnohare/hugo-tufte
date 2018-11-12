@@ -14,10 +14,13 @@
 </dl>
 {{ with .Params.series }}
   <dl>
-    <dt>{{ . }}:<a name='skip-to-series-navigation'> </a></dt>
+    {{ $title := $.Site.Param (printf "series-%s" .) }}
+    {{ if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
+    <dt>{{ $title }}:<a name='skip-to-series-navigation'> </a></dt>
     {{ $series := where $.Site.Pages "Params.series" . }}
     {{ $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
     {{ $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+    <dd></dd>
     {{ range first 1 $prev }}
       <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">&laquo; Previous post</a></dd>
     {{ end}}
