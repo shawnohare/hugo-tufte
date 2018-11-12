@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {{ partial "single/head.html" . }}
+  <!-- Need to add option to toggle width -->
+  <body class="default-width">
+    {{ partial "single/body-header.html" . }}
+    <main class="group" role="main" aria-label="Blog posting">
+      <article role="article" class="single-article">
+        <header>
+          <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+        </header>
+        <a name="skip-to-content"> </a>
+        <section class="content">
+          {{ .Content }}
+        </section>
+      </article>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
