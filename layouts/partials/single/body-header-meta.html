@@ -12,3 +12,17 @@
     <dd><time datetime="{{ .Format "2006-02-03" }}">{{ .Format "2006-02-03" }}</time></dd>
   {{ end }}
 </dl>
+{{ with .Params.series }}
+  <dl>
+    <dt>{{ . }}:<a name='skip-to-series-navigation'> </a></dt>
+    {{ $series := where $.Site.Pages "Params.series" . }}
+    {{ $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+    {{ $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+    {{ range first 1 $prev }}
+      <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">&laquo; Previous post</a></dd>
+    {{ end}}
+    {{ range last 1 $next }}
+      <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">Next post &raquo;</a></dd>
+    {{ end}}
+  </dl>
+{{ end }}

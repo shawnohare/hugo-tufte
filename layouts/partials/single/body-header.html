@@ -1,5 +1,13 @@
 <header>
   <nav class="group" role="navigation" aria-label="Site-wide">
+    <a href="#skip-to-content" title="Skip to Content" class="offscreen">Skip to Content</a>
+    {{ with .Params.tags }}
+      <a href="#skip-to-tags" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a>
+    {{ end }}
+    {{ with .Params.series }}
+      <a href="#skip-to-series-navigation" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
+    {{ end }}
+
     <h1><a href="{{ .Site.BaseURL }}/" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
 
     <a href="/about" title="About {{ .Site.Title }}">About</a>
