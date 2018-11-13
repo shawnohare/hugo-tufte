@@ -3,6 +3,8 @@
   {{ partial "single/head.html" . }}
   <!-- Need to add option to toggle width -->
   <body class="default-width">
+    <meta name=".Params.layout" value="{{ .Params.layout }}" />
+    <meta name=".Type" value="{{ .Type }}" />
     {{ partial "single/body-header.html" . }}
     <main class="group" role="main">
       <article role="article">
