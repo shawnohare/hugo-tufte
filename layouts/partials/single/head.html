@@ -7,7 +7,9 @@
 
   {{ $style := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $style.Permalink }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Sitemap.Filename | absURL }}" />
+  {{ $rssTemplate := resources.Get "feed.xml" }}
+  {{ $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.Permalink }}">
   <link rel="me" href="https://tabletop.social/@takeonrules" title="takeonrules@Mastodon">
   <link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
   <link rel="me" href="https://pluspora.com/people/3a495ca0ad6901364692005056268def" title="takeonrules@pluspora.com">
