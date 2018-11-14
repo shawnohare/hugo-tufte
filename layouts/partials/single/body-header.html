@@ -9,14 +9,14 @@
     {{ end }}
 
     <h1><a href="{{ .Site.BaseURL }}/" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
-
-    <a href="/about" title="About {{ .Site.Title }}">About</a>
-    <a href="/contact-me" title="Conact Me">Contact Me</a>
-    <a href="/series" aria-label="Site-wide list of Series" title="Site-wide list of Series">Series</a>
-    <a href="/tags" aria-label="Site-wide list of Tags" title="Site-wide list of Tags">Tags</a>
+    {{ range .Site.Menus.topnav }}
+      <a href="{{ .URL }}" title="{{ if .Title }}{{ .Title }}{{ else }}{{ .Name }} page{{ end }}">
+        {{ .Name }}
+      </a>
+    {{ end }}
   </nav>
   <form class="hide-when-javascript-disabled" role="search" method="get" action="https://cse.google.com/cse" aria-label="Site-wide" id="cse-search-box" target="_blank">
-    <input type="hidden" name="cx" value="006896638866293454983:pjr59zfk4ag" />
+    <input type="hidden" name="cx" value="{{ .Site.Params.googleCseCx }}" />
     <input name="ie" type="hidden" value="UTF-8" />
     <input name="q" type="text" id="google-q-param" aria-label="Search"/>
     <input name="sa" type="submit" value="Search" />
@@ -27,7 +27,7 @@
   </script>
   <noscript>
     <form role="search" method="get" action="https://google.com/search" aria-label="Site-wide" id="cse-search-box" target="_blank">
-      <input name="q" type="hidden" value="site:takeonrules.com" />
+      <input name="q" type="hidden" value="site:{{ .Site.Params.siteHost }}" />
       <input type="submit" value="Search via Google" />
     </form>
   </noscript>
