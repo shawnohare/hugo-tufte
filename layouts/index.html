@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  {{ partial "single/head.html" . }}
-  {{ partial "single/head.html" . }}
+  {{ partial "head.html" . }}
   <body class="default-width">
     {{ $paginator := .Paginate (where .Pages "Type" "post") 5 }}
-    {{ partial "single/body-header.html" . }}
+    {{ partial "body-header.html" . }}
     <nav role="navigation" aria-label="Blog postings pagination">
       {{ partial "paginator.html" $paginator }}
     </nav>

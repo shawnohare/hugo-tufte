@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  {{ partial "single/head.html" . }}
+  {{ partial "head.html" . }}
   <!-- Need to add option to toggle width -->
   <body class="default-width">
-    {{ partial "single/body-header.html" . }}
+    {{ partial "body-header.html" . }}
     <main class="group" role="main" aria-label="Blog posting">
       <nav role="navigation" aria-label="Blog postings navigation">
-        {{ partial "single/body-navigation.html" . }}
+        {{ partial "body-navigation.html" . }}
       </nav>
       <article role="article" class="single-article">
         <header>
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
           <div class="post-meta">
-            {{ partial "single/body-header-meta.html" . }}
+            {{ partial "body-header-meta.html" . }}
           </div>
         </header>
         <a name="skip-to-content"> </a>
@@ -21,7 +21,7 @@
         </section>
       </article>
       <nav role="navigation" aria-hidden="true">
-        {{ partial "single/body-navigation.html" . }}
+        {{ partial "body-navigation.html" . }}
       </nav>
     </main>
     {{ partial "footer.html" . }}
