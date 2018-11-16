@@ -1,7 +1,7 @@
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="google-site-verification" content="Qrv_HOtNzrtzf4kjCTH5bVcJCMLGyuvjHr7xHQ4jngM" />
+  <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
 
@@ -16,6 +16,7 @@
   <link rel="me" href="https://mewe.com/i/takeonrules" title="mewe.com/i/takeonrules">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .URL }}">
+
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ .Title }} // {{ .Site.Title  }}" />
   <meta property="og:description" content="{{ .Summary | plainify }}" />
