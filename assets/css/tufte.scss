@@ -66,6 +66,7 @@ blockquote {
   li { font-size: 1.1rem; margin-left: 3.5%; }
 // Removing the far too large padding for lists in a quote
   ul { padding-top: 0; }
+  ul ul, ul ol, ol ul, ol ol { width: 100%; }
   footer { font-size: 1.1rem; margin-top: -1.2818181rem; width: 45%; text-align: right; }
 }
 
