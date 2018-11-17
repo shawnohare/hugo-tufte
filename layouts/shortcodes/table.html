@@ -1,0 +1,9 @@
+{{ $caption := .Get "caption" }}
+{{ $tableNumber := .Page.Scratch.Get "tableNumber" }}{{ if eq $tableNumber nil }}{{ .Page.Scratch.Set "tableNumber" 0 }}{{ end }}
+{{ .Page.Scratch.Add "tableNumber" 1 }}{{ $tableNumber = .Page.Scratch.Get "tableNumber" }}
+<div class="table-wrapper">
+<table aria-label="Table {{ $tableNumber}}: {{ $caption }}">
+  <caption>Table {{ $tableNumber}}: {{ $caption }}</caption>
+  {{ .Inner }}
+</table>
+</div>
