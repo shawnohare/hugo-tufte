@@ -7,7 +7,9 @@
     {{ with .Params.series }}
       <a href="#skip-to-series-navigation" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
     {{ end }}
-
+    {{ if eq .Type "post" }}
+      <a href="#skip-to-related-posts" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a>
+    {{ end }}
     <h1><a href="{{ .Site.BaseURL }}/" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
     {{ range .Site.Menus.topnav }}
       <a href="{{ .URL }}" title="{{ if .Title }}{{ .Title }}{{ else }}{{ .Name }} page{{ end }}">

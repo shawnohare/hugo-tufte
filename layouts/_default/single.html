@@ -23,6 +23,17 @@
       <nav role="navigation" aria-hidden="true">
         {{ partial "body-navigation.html" . }}
       </nav>
+      <a name="skip-to-related-posts"> </a>
+      <aside role="complementary" aria-label="Related blog posting">
+        <h2>Related Posts</h2>
+        <ul>
+          {{ range first 5 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
+            <li>
+              <a aria-label="Related post: {{ .Title }}" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </aside>
     </main>
     {{ partial "footer.html" . }}
   </body>

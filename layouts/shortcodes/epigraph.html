@@ -5,7 +5,7 @@
 {{ if .IsNamedParams }}
 <footer>
 {{ with .Get "pre" }}{{ . }}{{ end }}
-{{ with .Get "cite" }}<cite>{{ . }}</cite>{{ end }}
+{{ with .Get "cite" }}<cite>{{ . | markdownify }}</cite>{{ end }}
 {{ with .Get "post" }}{{ . }}{{ end }}
 </footer>
 {{ end }}
