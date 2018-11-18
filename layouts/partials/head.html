@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
 
-  {{ $style := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $style.Permalink }}">
+  {{ $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.Permalink }}">
+  {{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.Permalink }}">
   {{ $rssTemplate := resources.Get "feed.xml" }}
   {{ $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.Permalink }}">
