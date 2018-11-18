@@ -6,22 +6,22 @@
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
 
   {{ $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.Permalink }}">
+  <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.RelPermalink }}">
   {{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.Permalink }}">
+  <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.RelPermalink }}">
+  {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
+  {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
   {{ $rssTemplate := resources.Get "feed.xml" }}
   {{ $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.Permalink }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.RelPermalink }}">
   <link rel="me" href="https://tabletop.social/@takeonrules" title="takeonrules@Mastodon">
   <link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
   <link rel="me" href="https://pluspora.com/people/3a495ca0ad6901364692005056268def" title="takeonrules@pluspora.com">
   <link rel="me" href="https://mewe.com/i/takeonrules" title="mewe.com/i/takeonrules">
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .URL }}">
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ .Title }} // {{ .Site.Title  }}" />
-  <meta property="og:description" content="{{ .Summary | plainify }}" />
+  {{ if .Summary }}<meta property="og:description" content="{{ .Summary | plainify }}" />{{ end }}
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:image" content="https://secure.gravatar.com/blavatar/e102bdad068d0deb3166f047b6e1a1e5?s=200&amp;ts=1538008387" />

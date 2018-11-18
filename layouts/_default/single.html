@@ -29,7 +29,7 @@
         <ul>
           {{ range first 5 (.Site.RegularPages.Related .) }}
             <li>
-              <a aria-label="Related post: {{ .Title }}" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+              <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
             </li>
           {{ end }}
         </ul>

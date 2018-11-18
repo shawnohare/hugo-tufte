@@ -1,0 +1,21 @@
+{{ $year := .Get 0 | int }}
+{{ $pages := where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" $year }}
+<div class="list-page">
+  <ul>
+      {{ range $pages.GroupByDate "January" }}
+        <li>
+        <details open>
+          <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
+            <ul>
+              {{ range .Pages }}
+              <li>
+                <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+              {{ end }}
+            </ul>
+        </details>
+        </li>
+      {{ end }}
+  </ul>
+</div>

@@ -1,7 +1,7 @@
 {{ $path     := .Get "src" }}{{ $alt      := .Get "alt" }}{{ $caption  := .Get "caption" }}{{ $original := resources.Get $path  }}{{ $result   := $original.Resize "770x" }}
 <figure>
   <figcaption>{{ $caption | markdownify }}</figcaption>
-  <a href="{{ $original.Permalink}}" title='See full-size image'>
-    <img src="{{ $result.Permalink }}" alt="{{ $alt }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+  <a href="{{ $original.RelPermalink}}" title='See full-size image'>
+    <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
   </a>
 </figure>

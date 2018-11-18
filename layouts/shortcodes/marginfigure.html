@@ -1,7 +1,7 @@
 {{ $path     := .Get "src" }}{{ $alt      := .Get "alt" }}{{ $caption  := .Get "caption" }}{{ $original := resources.Get $path  }}{{ $result   := $original.Resize "360x" }}<p>
 <span class="marginnote marginfigure" role="note">
-<a href="{{ $original.Permalink }}" title="See full-size image">
-  <img class="fullwidth" src="{{ $result.Permalink }}" alt="{{$alt}}" data-width="{{ $result.Width }}" data-heigh="{{ $result.Height }}"/>
+<a href="{{ $original.RelPermalink }}" title="See full-size image">
+  <img class="fullwidth" src="{{ $result.RelPermalink }}" alt="{{$alt}}" data-width="{{ $result.Width }}" data-heigh="{{ $result.Height }}"/>
 </a><br>{{ $caption | markdownify }}
 </span>
 </p>
