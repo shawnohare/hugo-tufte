@@ -27,7 +27,7 @@
       <aside role="complementary" aria-label="Related blog posting">
         <h2>Related Posts</h2>
         <ul>
-          {{ range first 5 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
+          {{ range first 5 (.Site.RegularPages.Related .) }}
             <li>
               <a aria-label="Related post: {{ .Title }}" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
             </li>
