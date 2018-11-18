@@ -6,10 +6,10 @@
     {{ end }}
   {{ end }}
   <dt>Published:</dt>
-  <dd><time datetime="{{ .PublishDate.Format "2006-02-03" }}">{{ .PublishDate.Format "2006-02-03" }}</time></dd>
+  <dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
   {{ with .Lastmod }}
     <dt>Modified:</dt>
-    <dd><time datetime="{{ .Format "2006-02-03" }}">{{ .Format "2006-02-03" }}</time></dd>
+    <dd><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time></dd>
   {{ end }}
 </dl>
 {{ with .Params.series }}
