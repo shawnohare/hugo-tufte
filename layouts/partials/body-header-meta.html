@@ -7,9 +7,9 @@
   {{ end }}
   <dt>Published:</dt>
   <dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
-  {{ with .Lastmod }}
+  {{ if ne .Lastmod .Date }}
     <dt>Modified:</dt>
-    <dd><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time></dd>
+    <dd><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
   {{ end }}
 </dl>
 {{ with .Params.series }}

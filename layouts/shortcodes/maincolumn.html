@@ -1,4 +1,4 @@
-{{ $path     := .Get "src" }}{{ $alt      := .Get "alt" }}{{ $caption  := .Get "caption" }}{{ $original := resources.Get $path  }}{{ $result   := $original.Resize "770x" }}<p>
+{{ $path     := .Get "src" }}{{ $alt      := .Get "alt" }}{{ $caption  := .Get "caption" }}{{ $original := resources.Get $path  }}{{ $result   := $original.Resize "770x" }}
 <figure>
   <figcaption>{{ $caption | markdownify }}</figcaption>
   <a href="{{ $original.Permalink}}" title='See full-size image'>
