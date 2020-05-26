@@ -112,7 +112,7 @@ func main() {
 ### Figure
 Below we have an example of a regular width figure.
 {{< figure
-  src="https://raw.githubusercontent.com/edwardtufte/tufte-css/master/img/exports-imports.png"
+  src="https://github.com/edwardtufte/tufte-css/raw/gh-pages/img/exports-imports.png"
   class="class param"
   title="The image title."
   caption="This is the image caption."
