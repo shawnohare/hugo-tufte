@@ -1,11 +1,18 @@
 # Tufte Hugo Theme
 
+
 Hugo-Tufte is a minimalist blog-like theme for the
 [static site generator Hugo](https://gohugo.io) that
 attempts to be a faithful implementation of the
 [Tufte-css](https://github.com/edwardtufte/tufte-css) project.
 It supports mathematical typesetting via [MathJax](https://www.mathjax.org).
 By utilizing copious partial templates the theme is largely customizable.
+
+## State of Project
+
+This theme is largely unmaintained. If there is a particular fork
+that should be considered the primary project please submit a PR
+updating the README, thanks!
 
 ## Math
 
