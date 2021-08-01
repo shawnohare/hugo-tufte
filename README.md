@@ -1,5 +1,6 @@
-# Tufte Hugo Theme
+# Tufte Hugo Theme 
 
+This project is now maintained at https://github.com/slashformotion/hugo-tufte . 
 
 Hugo-Tufte is a minimalist blog-like theme for the
 [static site generator Hugo](https://gohugo.io) that
@@ -10,9 +11,7 @@ By utilizing copious partial templates the theme is largely customizable.
 
 ## State of Project
 
-This theme is largely unmaintained. If there is a particular fork
-that should be considered the primary project please submit a PR
-updating the README, thanks!
+This project is now maintained at https://github.com/slashformotion/hugo-tufte .
 
 ## Math
 
