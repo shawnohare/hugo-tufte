@@ -1,5 +1,10 @@
 # Tufte Hugo Theme
 
+## Maintenance Warning
+
+I do not actively maintain this theme. A fork that now
+also apears unmaintained can be found at
+https://github.com/slashformotion/hugo-tufte
 
 Hugo-Tufte is a minimalist blog-like theme for the
 [static site generator Hugo](https://gohugo.io) that
